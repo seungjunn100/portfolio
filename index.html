@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>프론트엔드 개발자 포트폴리오 | 백승준</title>
+  <meta name="description" content="프론트엔드 개발자 백승준의 포트폴리오입니다." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="프론트엔드 개발자 포트폴리오 | 백승준" />
+  <meta property="og:description" content="프론트엔드 개발자 백승준의 포트폴리오입니다." />
+  <meta property="og:image" content="/assets/images/og-image.png" />
+  <meta property="og:url" content="https://seungjunn100.github.io/portfolio/" />
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./main.js"></script>
+</head>
+<body>
+  <header id="header" class="header">
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav__link" href="#intro">Home</a></li>
+        <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
+        <li class="nav__item"><a class="nav__link" href="#skills">Skills</a></li>
+        <li class="nav__item"><a class="nav__link" href="#projects">Projects</a></li>
+        <li class="nav__item"><a class="nav__link" href="#thanks">Thanks</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="intro" class="intro">
+      <div class="intro__inner">
+        <h1 class="intro__title">
+          <span class="intro__title-line">
+            <span class="intro__title-text">
+              안녕하세요,<span class="intro__greeting" aria-hidden="true">🖐🏻</span>
+            </span>
+          </span>
+          <span class="intro__title-line">
+            <span class="intro__title-text">
+              프론트엔드 개발자 백승준입니다.
+            </span>
+          </span>
+        </h1>
+        <p class="intro__description">
+          <span class="intro__description-line">
+            <span class="intro__description-text">
+              단순한 화면 구현을 넘어 사용자의 이용 흐름을 이해하고 
+              구조를 설계하여 더 나은 사용자 경험을 만드는 데 집중합니다.
+            </span>
+          </span>
+        </p>
+      </div>
+      
+      <a class="intro__scroll" href="#about">
+        <span class="intro__scroll-text sr-only">About 섹션으로 이동</span>
+      </a>
+    </section>
+
+    <section id="about" class="about">
+      <h2 class="section-title">About</h2>
+
+      <div class="about__item about__item--profile">
+        <div class="about__header">
+          <div class="about__image-box">
+            <img class="about__image about__image--profile" src="./assets/images/profile.jpg" alt="백승준 프로필 사진" />
+          </div>
+          <div class="about__text-box">
+            <h3 class="about__subtitle">Profile</h3>
+            <p class="about__label">백승준 <span class="about__label-sub">프론트엔드 개발자</span></p>
+          </div>
+        </div>
+
+        <div class="about__description">
+          <p class="about__text">
+            안녕하세요, 사용자의 이용 흐름을 이해하고 구조를 설계하여, <br />
+            더 나은 사용자 경험을 만드는 것을 중요하게 생각하는 프론트엔드 개발자 백승준입니다.
+          </p>
+          <p class="about__text">
+            웹퍼블리셔 경험을 통해 화면을 구현하는 일에 흥미를 느꼈고, <br />
+            이후 사용자와 서비스가 상호작용하는 과정을 더 깊이 다루고 싶어 프론트엔드 개발에 관심을 갖게 되었습니다.
+          </p>
+          <p class="about__text">
+            기능의 동작 원리와 구조를 이해하며 구현하려고 노력하고, <br />
+            협업 과정에서 문서화와 정리를 통해 더 나은 작업 환경을 만들고 싶은 개발자입니다.
+          </p>
+          <p class="about__text">
+            현재는 기본기를 다지며 직접 기획한 개인 프로젝트를 통해 설계부터 구현까지의 전 과정을 경험하고 있으며, <br />
+            학습 과정을 꾸준히 기록하며 기술적 깊이를 갖춘 개발자로 성장하고 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="about__item about__item--experience">
+        <div class="about__header about__header--reverse">
+          <div class="about__image-box" aria-hidden="true">
+            <img class="about__image about__image--icon" src="./assets/icons/experience.png" alt="" />
+          </div>
+          <div class="about__text-box">
+            <h3 class="about__subtitle">Experience</h3>
+            <p class="about__label">웹퍼블리셔</p>
+          </div>
+        </div>
+
+        <div class="about__description about__description--reverse">
+          <p class="about__text">
+            (주)신비웹 웹에이전시에서 약 2년 8개월간 웹퍼블리셔로 근무하며 <br />
+            다양한 산업군의 웹사이트 구축, 운영, 유지보수를 담당했습니다.
+          </p>
+          <p class="about__text">
+            대기업 그룹사의 웹사이트를 비롯해 병원, 대학교, 기업, 쇼핑몰, 프랜차이즈 등 <br />
+            여러 도메인의 프로젝트를 수행하며 각기 다른 서비스 목적과 요구사항을 실무에서 경험했습니다.
+          </p>
+          <p class="about__text">
+            프로젝트마다 요구사항에 맞는 레이아웃과 UI를 구현하고, <br />
+            JavaScript와 jQuery를 활용한 인터랙션 개발을 통해 사용자 경험을 개선해왔습니다.
+          </p>
+          <p class="about__text">
+            또한 웹 표준과 웹 접근성을 고려한 퍼블리싱의 중요성을 실무를 통해 익히며, <br />
+            다양한 사용자 환경에서도 안정적으로 동작하는 화면을 구현하는 역량을 키웠습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="about__item about__item--education">
+        <div class="about__header">
+          <div class="about__image-box" aria-hidden="true">
+            <img class="about__image about__image--icon" src="./assets/icons/education.png" alt="" />
+          </div>
+          <div class="about__text-box">
+            <h3 class="about__subtitle">Education</h3>
+            <p class="about__label">수료 및 학력</p>
+          </div>
+        </div>
+
+        <div class="about__description about__description--wide">
+          <ul class="about__list">
+            <li class="about__list-item">
+              <strong class="about__list-title">멋쟁이사자처럼</strong>
+              <p class="about__list-text">프론트엔드 개발 부트캠프 수료</p>
+              <p class="about__list-text about__list-text--muted">2025.08 - 2026.02</p>
+            </li>
+            <li class="about__list-item">
+              <strong class="about__list-title">이젠아카데미</strong>
+              <p class="about__list-text">웹퍼블리셔 양성 과정 수료</p>
+              <p class="about__list-text about__list-text--muted">2021.08 - 2022.01</p>
+            </li>
+            <li class="about__list-item">
+              <strong class="about__list-title">동양미래대학교</strong>
+              <p class="about__list-text">정보통신공학과 졸업 <span class="about__list-text--muted">3.73 / 4.5</span></p>
+              <p class="about__list-text about__list-text--muted">2014.02 - 2020.03</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2 class="section-title">Skills</h2>
+
+      <div class="skills__category">
+        <h3 class="skills__category-title">Web</h3>
+
+        <ul class="skills__items">
+          <li class="skills__item">
+            <span class="skills__icon" aria-hidden="true">
+              <img src="./assets/icons/html5.png" alt="" />
+            </span>
+            <div class="skills__content">
+              <h4 class="skills__name">HTML5</h4>
+              <p class="skills__description">
+                웹 표준을 기반으로 한 시맨틱 마크업 및 접근성 고려한 구조 설계
+              </p>
+            </div>
+          </li>
+          <li class="skills__item">
+            <span class="skills__icon" aria-hidden="true">
+              <img src="./assets/icons/css3.png" alt="" />
+            </span>
+            <div class="skills__content">
+              <h4 class="skills__name">CSS3</h4>
+              <p class="skills__description">
+                반응형 레이아웃 구현 및 애니메이션과 인터랙션을 활용한 UI 스타일링
+              </p>
+            </div>
+          </li>
+          <li class="skills__item">
+            <span class="skills__icon" aria-hidden="true">
+              <img src="./assets/icons/accessibility.png" alt="" />
+            </span>
+            <div class="skills__content">
+              <h4 class="skills__name">웹 접근성</h4>
+              <p class="skills__description">
+                시맨틱 마크업, aria 속성 등을 활용하여 다양한 사용자 환경을 고려한 UI 구현
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="skills__category">
+        <h3 class="skills__category-title">Language</h3>
+
+        <ul class="skills__items">
+          <li class="skills__item">
+            <span class="skills__icon" aria-hidden="true">
+              <img src="./assets/icons/javascript.png" alt="" />
+            </span>
+            <div class="skills__content">
+              <h4 class="skills__name">JavaScript</h4>
+              <p class="skills__description">
+                ES6+ 문법 기반 비동기 처리, 이벤트 흐름 및 DOM 제어 구현
+              </p>
+            </div>
+          </li>
+          <li class="skills__item">
+            <span class="skills__icon" aria-hidden="true">
+              <img src="./assets/icons/typescript.png" alt="" />
+            </span>
+            <div class="skills__content">
+              <h4 class="skills__name">TypeScript</h4>
+              <p class="skills__description">
+                API 응답 및 도메인 데이터 타입 정의를 통한 안정성 있는 코드 작성
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="skills__category">
+        <h3 class="skills__category-title">Framework, <br />Library</h3>
+
+        <ul class="skills__items">
+          <li class="skills__item">
+            <span class="skills__icon" aria-hidden="true">
+              <img src="./assets/icons/react.png" alt="" />
+            </span>
+            <div class="skills__content">
+              <h4 class="skills__name">React</h4>
+              <p class="skills__description">
+                컴포넌트 기반 UI 설계 및 사용자 상태에 따른 화면 제어 경험
+              </p>
+            </div>
+          </li>
+          <li class="skills__item">
+            <span class="skills__icon" aria-hidden="true">
+              <img src="./assets/icons/nextjs.png" alt="" />
+            </span>
+            <div class="skills__content">
+              <h4 class="skills__name">Next.js</h4>
+              <p class="skills__description">
+                App Router 기반 페이지 구조 설계 및 인증/데이터 흐름 구현 경험
+              </p>
+            </div>
+          </li>
+          <li class="skills__item">
+            <span class="skills__icon" aria-hidden="true">
+              <img src="./assets/icons/zustand.png" alt="" />
+            </span>
+            <div class="skills__content">
+              <h4 class="skills__name">Zustand</h4>
+              <p class="skills__description">
+                전역 상태 관리 및 persist를 활용한 로그인 상태 유지 및 hydration 문제 해결 경험
+              </p>
+            </div>
+          </li>
+          <li class="skills__item">
+            <span class="skills__icon" aria-hidden="true">
+              <img src="./assets/icons/tailwindcss.png" alt="" />
+            </span>
+            <div class="skills__content">
+              <h4 class="skills__name">Tailwind CSS</h4>
+              <p class="skills__description">
+                유틸리티 기반 스타일링을 통한 빠른 UI 구현 및 일관된 디자인 적용
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="skills__category">
+        <h3 class="skills__category-title">Tools</h3>
+
+        <ul class="skills__items">
+          <li class="skills__item">
+            <span class="skills__icon" aria-hidden="true">
+              <img src="./assets/icons/git.png" alt="" />
+            </span>
+            <div class="skills__content">
+              <h4 class="skills__name">Git/GitHub</h4>
+              <p class="skills__description">
+                브랜치 전략 및 PR 기반 협업 경험
+              </p>
+            </div>
+          </li>
+          <li class="skills__item">
+            <span class="skills__icon" aria-hidden="true">
+              <img src="./assets/icons/vercel.png" alt="" />
+            </span>
+            <div class="skills__content">
+              <h4 class="skills__name">Vercel</h4>
+              <p class="skills__description">
+                Next.js 및 정적 프로젝트 배포 및 환경 설정 경험
+              </p>
+            </div>
+          </li>
+          <li class="skills__item">
+            <span class="skills__icon" aria-hidden="true">
+              <img src="./assets/icons/vite.png" alt="" />
+            </span>
+            <div class="skills__content">
+              <h4 class="skills__name">Vite</h4>
+              <p class="skills__description">
+                React 기반 프로젝트 빌드 및 개발 환경 구성 경험
+              </p>
+            </div>
+          </li>
+          <li class="skills__item">
+            <span class="skills__icon" aria-hidden="true">
+              <img src="./assets/icons/photoshop.png" alt="" />
+            </span>
+            <div class="skills__content">
+              <h4 class="skills__name">Photoshop</h4>
+              <p class="skills__description">
+                이미지 편집 및 UI 리소스 제작 경험
+              </p>
+            </div>
+          </li>
+          <li class="skills__item">
+            <span class="skills__icon" aria-hidden="true">
+              <img src="./assets/icons/figma.png" alt="" />
+            </span>
+            <div class="skills__content">
+              <h4 class="skills__name">Figma</h4>
+              <p class="skills__description">
+                디자인 시안 기반 UI 구현 및 협업 경험
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <p class="skills__note">
+        * 프로젝트 경험을 기반으로 React 생태계를 중심으로 지속적으로 학습하고 있습니다.
+      </p>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2 class="section-title">Projects</h2>
+
+      <article class="projects__item">
+        <div class="projects__image">
+          <img src="./assets/images/projects-01.png" alt="junn.dev 개인 블로그 메인 화면" />
+        </div>
+
+        <div class="projects__content">
+          <h3 class="projects__title">junn.dev 개인 블로그</h3>
+
+          <p class="projects__description">
+            Markdown 기반으로 글을 작성하고, 빌드 시 이를 가공하여 화면에 렌더링하는 개인 기술 블로그입니다.
+          </p>
+
+          <p class="projects__description">
+            단순히 글을 작성하는 공간을 넘어서, GitHub 레포지토리를 콘텐츠 관리 시스템(CMS)처럼 활용하여 <br />
+            Markdown 파일을 중심으로 콘텐츠를 관리하고, 변경 이력을 Git으로 추적할 수 있도록 설계했습니다.
+          </p>
+
+          <div class="projects__meta">
+            <div class="projects__meta-item">
+              <h4 class="projects__meta-title">유형</h4>
+              <p class="projects__meta-value">개인 프로젝트</p>
+            </div>
+            
+            <div class="projects__meta-item">
+              <h4 class="projects__meta-title">역할</h4>
+              <p class="projects__meta-value">기획, 설계, 구현, 배포</p>
+            </div>
+
+            <div class="projects__meta-item">
+              <h4 class="projects__meta-title">주요 기술</h4>
+
+              <ul class="projects__stack">
+                <li class="projects__stack-item">React</li>
+                <li class="projects__stack-item">React Router</li>
+                <li class="projects__stack-item">React Markdown</li>
+                <li class="projects__stack-item">TypeScript</li>
+                <li class="projects__stack-item">Vite</li>
+                <li class="projects__stack-item">Vercel</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects__section">
+          <h4 class="projects__section-title">주요 기능</h4>
+
+          <div class="projects__feature">
+            <div class="projects__feature-item">
+              <div class="projects__section-image">
+                <img src="./assets/images/projects-01-01.png" alt="junn.dev 주요 기능 화면 - 1" />
+              </div>
+
+              <p class="projects__feature-description">
+                Markdown 파일을 데이터 소스로 사용하여 게시글을 관리하도록 설계했습니다. 
+                파일을 읽어 본문(content)과 메타 정보(frontmatter)를 분리하고, React Markdown을 통해 본문을 렌더링했습니다.
+              </p>
+              
+              <p class="projects__feature-description">
+                또한 frontmatter를 활용해 제목, 설명, 날짜, 카테고리, slug 기반 라우팅을 구성하여
+                카테고리별 게시글 목록과 상세 페이지를 구현했습니다.
+              </p>
+            </div>
+
+            <div class="projects__feature-item">
+              <div class="projects__section-image">
+                <img src="./assets/images/projects-01-02.png" alt="junn.dev 주요 기능 화면 - 2" />
+              </div>
+
+              <p class="projects__feature-description">
+                frontmatter를 기반으로 페이지별 SEO 메타데이터 및 OG 태그를 생성하도록 구현했습니다.
+              </p>
+
+              <p class="projects__feature-description">
+                Prerender를 적용하여 빌드 시점에 각 페이지의 HTML을 미리 생성하고, 
+                메타데이터를 포함한 완성된 HTML 전달하도록 개선하여 초기 렌더링 성능과 검색엔진 노출을 함께 향상시켰습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects__section">
+          <h4 class="projects__section-title">트러블 슈팅</h4>
+
+          <div class="projects__trouble">
+            <div class="projects__trouble-item">
+              <h5 class="projects__trouble-title">메타데이터가 초기 HTML에 반영되지 않는 문제</h5>
+
+              <dl class="projects__trouble-detail">
+                <div class="projects__trouble-row">
+                  <dt>문제</dt>
+                  <dd>react-helmet-async로 페이지별 메타데이터를 적용했으나, 개발자 도구에서는 정상적으로 보이는 반면 Ctrl+U 원본 HTML에는 반영되지 않는 문제가 발생했습니다.</dd>
+                </div>
+                <div class="projects__trouble-row">
+                  <dt>원인</dt>
+                  <dd>react-helmet-async는 React 렌더링 이후에 head를 수정하는 방식으로, 초기 HTML에는 메타데이터가 포함되지 않습니다. 개발자 도구는 JS 실행 이후 DOM을 보여주지만 Ctrl+U는 서버가 내려준 원본 HTML을 보여주기 때문에 차이가 발생했습니다.</dd>
+                </div>
+                <div class="projects__trouble-row">
+                  <dt>해결</dt>
+                  <dd>클라이언트 방식을 제거하고, 프리렌더 단계에서 HTML 생성 시 메타데이터를 포함하도록 변경했습니다. metadata.ts에서 URL 기준으로 메타데이터를 생성하고, entry-server.tsx에서 head에 삽입하는 구조로 재설계했습니다.</dd>
+                </div>
+                <div class="projects__trouble-row">
+                  <dt>결과</dt>
+                  <dd>초기 HTML에 메타데이터가 포함되어 SEO 및 SNS 공유 미리보기가 정상 동작하게 되었습니다. 클라이언트 라우팅 전환 시에도 title, description, OG 태그가 올바르게 갱신되도록 head 동기화 로직을 추가해 SPA 환경에서도 완전히 대응했습니다.</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="projects__trouble-item">
+              <h5 class="projects__trouble-title">gray-matter 사용 시 Buffer 에러 발생</h5>
+
+              <dl class="projects__trouble-detail">
+                <div class="projects__trouble-row">
+                  <dt>문제</dt>
+                  <dd>Markdown frontmatter 파싱을 위해 gray-matter를 사용했으나, 브라우저 실행 시 Buffer is not defined 에러가 발생했습니다.</dd>
+                </div>
+                <div class="projects__trouble-row">
+                  <dt>원인</dt>
+                  <dd>gray-matter는 Node.js 환경을 기준으로 만들어진 라이브러리로 내부적으로 Buffer를 사용합니다. 브라우저에서는 Node.js 전역 객체를 사용할 수 없어 에러가 발생했습니다.</dd>
+                </div>
+                <div class="projects__trouble-row">
+                  <dt>해결</dt>
+                  <dd>외부 라이브러리 없이 브라우저에서 직접 동작하는 frontmatter 파서를 직접 구현했습니다. --- 구분자를 기준으로 문자열을 분리하고 key-value 형태로 파싱하는 방식으로 처리했습니다.</dd>
+                </div>
+                <div class="projects__trouble-row">
+                  <dt>결과</dt>
+                  <dd>브라우저 환경에서 정상 동작하게 되었고, 외부 의존성을 제거했습니다. 직접 파서를 구현하면서 Markdown 데이터 구조에 대한 이해도도 높일 수 있었습니다.</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="projects__item">
+        <div class="projects__image">
+          <img src="./assets/images/projects-02.png" alt="영양제 구독 팀 프로젝트 메인 화면" />
+        </div>
+        <div class="projects__content">
+          <h3 class="projects__title">영구 (영양제 구독)</h3>
+
+          <p class="projects__description">
+            AI 설문 흐름을 통해 사용자의 컨디션 상태를 분석하고, 
+            맞춤형 영양제를 추천하는 구독형 서비스입니다.
+          </p>
+
+          <p class="projects__description">
+            설문 → 분석 → 추천 → 구독으로 이어지는 흐름을 설계하고, <br />
+            사용자가 자신의 컨디션을 이해하고 관리하도록 돕는 서비스를 구현했습니다.
+          </p>
+
+          <div class="projects__meta">
+            <div class="projects__meta-item">
+              <h4 class="projects__meta-title">유형</h4>
+              <p class="projects__meta-value">팀 프로젝트 (FE 4명)</p>
+            </div>
+            
+            <div class="projects__meta-item">
+              <h4 class="projects__meta-title">역할</h4>
+              <p class="projects__meta-value">PL (Project Leader)</p>
+            </div>
+
+            <div class="projects__meta-item">
+              <h4 class="projects__meta-title">주요 기술</h4>
+
+              <ul class="projects__stack">
+                <li class="projects__stack-item">Next.js</li>
+                <li class="projects__stack-item">React</li>
+                <li class="projects__stack-item">TypeScript</li>
+                <li class="projects__stack-item">Zustand</li>
+                <li class="projects__stack-item">Tailwind CSS</li>
+                <li class="projects__stack-item">Vercel</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects__section">
+          <h4 class="projects__section-title">주요 기능</h4>
+
+          <div class="projects__feature">
+            <div class="projects__feature-item">
+              <div class="projects__section-image">
+                <img src="./assets/images/projects-02-01.png" alt="AI 설문 기반 영양제 추천 흐름 화면" />
+              </div>
+
+              <p class="projects__feature-description">
+                사용자의 기본 정보와 현재 컨디션, 세부 증상에 대한 설문 흐름을 통해 
+                개인의 상태를 단계적으로 선택할 수 있도록 구성했습니다.
+              </p>
+
+              <p class="projects__feature-description">
+                설문 결과를 기반으로 AI가 컨디션을 분석하고 맞춤형 영양제를 추천하며, 
+                추천된 영양제의 효능, 복용 방법, 주의사항을 AI로 추가로 확인할 수 있는 흐름으로 설계했습니다.
+              </p>
+
+              <p class="projects__feature-description">
+                사용자가 원할 때마다 컨디션을 다시 검사하고 맞춤형 영양제를 추천받는 서비스 특성상, 
+                정기적으로 자동 결제가 이루어지는 구독 방식보다 사용자가 직접 결제하는 흐름이 더 적합하여 일반 결제 방식으로 구현했습니다.
+              </p>
+            </div>
+
+            <div class="projects__feature-item">
+              <div class="projects__section-image">
+                <img src="./assets/images/projects-02-02.png" alt="로그인 및 회원가입, 마이페이지 화면" />
+              </div>
+
+              <p class="projects__feature-description">
+                일반 로그인과 카카오 소셜 로그인을 구현하여 사용자가 원하는 방식으로 
+                서비스에 접근할 수 있도록 인증 흐름을 구성했습니다.
+                카카오 소셜 로그인은 Kakao JavaScript SDK를 활용하여 인가 코드를 요청하고, 
+                이를 서버로 전달해 사용자 인증을 처리하는 방식으로 구현했습니다.
+              </p>
+
+              <p class="projects__feature-description">
+                회원가입에서는 PortOne을 활용한 본인인증을 적용하여 사용자 신뢰성을 확보했으며,
+                입력 필드는 포커스를 벗어났을 때 1차 유효성 검증을 수행하고, 이후에는 실시간 검증이 이루어지도록 처리해 
+                사용자 경험을 개선했습니다.
+              </p>
+
+              <p class="projects__feature-description">
+                마이페이지에서는 사용자 정보, 구독 상태, 설문 이력을 확인할 수 있도록 구성했습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects__section">
+          <h4 class="projects__section-title">트러블 슈팅</h4>
+
+          <div class="projects__trouble">
+            <div class="projects__trouble-item">
+              <h5 class="projects__trouble-title">
+                헤더 인증 상태 깜빡임 (Hydration Flash) 문제
+              </h5>
+
+              <dl class="projects__trouble-detail">
+                <div class="projects__trouble-row">
+                  <dt>문제</dt>
+                  <dd>
+                    로그인 상태에서 새로고침 시, 헤더 메뉴가 "로그인/회원가입" → "마이페이지/구독하기"로 순간적으로 변경되는 깜빡임 현상이 발생했습니다.
+                  </dd>
+                </div>
+
+                <div class="projects__trouble-row">
+                  <dt>원인</dt>
+                  <dd>
+                    인증 상태를 Zustand + sessionStorage로 클라이언트에서 관리하면서,
+                    SSR 시점에는 user 정보를 알 수 없어 초기 HTML에 비로그인 상태가 렌더링되고,
+                    이후 hydration 과정에서 상태가 복원되며 UI가 변경되었습니다.
+                  </dd>
+                </div>
+
+                <div class="projects__trouble-row">
+                  <dt>해결</dt>
+                  <dd>
+                    인증 상태의 참조를 클라이언트에서 서버로 이동시켜,
+                    httpOnly 쿠키의 accessToken을 Server Component에서 읽어
+                    SSR 시점에 로그인 여부를 판단하도록 구조를 변경했습니다.
+                    또한 revalidatePath를 적용해 로그인/로그아웃 시 서버 상태를 즉시 반영하도록 개선했습니다.
+                  </dd>
+                </div>
+
+                <div class="projects__trouble-row">
+                  <dt>결과</dt>
+                  <dd>
+                    초기 HTML 생성 시점부터 올바른 인증 상태가 반영되면서
+                    새로고침 시 UI 깜빡임이 완전히 제거되었고,
+                    hydration에 의존하지 않는 안정적인 인증 상태 관리가 가능해졌습니다.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="projects__trouble-item">
+              <h5 class="projects__trouble-title">useSearchParams() 사용 시 Suspense Boundary 누락으로 인한 빌드 에러</h5>
+
+              <dl class="projects__trouble-detail">
+                <div class="projects__trouble-row">
+                  <dt>문제</dt>
+                  <dd>
+                    카카오 로그인 실패 시 /login?error=kakao 쿼리 파라미터를 감지하기 위해 useSearchParams()를 사용했으나, 
+                    개발 환경에서는 정상 동작했지만 빌드 시 Suspense Boundary 관련 에러가 발생했습니다.
+                  </dd>
+                </div>
+                <div class="projects__trouble-row">
+                  <dt>원인</dt>
+                  <dd>
+                    Next.js는 빌드 시점에 페이지를 정적으로 렌더링하려고 하는데, 
+                    useSearchParams()는 브라우저의 URL을 기반으로 동작하는 훅이기 때문에 
+                    빌드 시점에는 쿼리 파라미터 값을 알 수 없어 정적 렌더링이 불가능했습니다. 
+                    이로 인해 정적/동적 렌더링 경계를 판단할 수 없어 에러가 발생했습니다.
+                  </dd>
+                </div>
+                <div class="projects__trouble-row">
+                  <dt>해결</dt>
+                  <dd>
+                    useSearchParams()를 사용하는 컴포넌트를 &lt;Suspense&gt;로 감싸 
+                    정적 렌더링과 동적 렌더링의 경계를 명시적으로 분리하도록 수정했습니다.
+                  </dd>
+                </div>
+                <div class="projects__trouble-row">
+                  <dt>결과</dt>
+                  <dd>
+                    빌드 에러를 해결하면서도 페이지 전체가 동적 렌더링으로 전환되는 것을 방지했고, 
+                    정적 최적화를 유지한 상태에서 쿼리 파라미터 기반 에러 메시지를 정상적으로 처리할 수 있었습니다.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="thanks" class="thanks">
+      <h2 class="section-title sr-only">Thanks</h2>
+
+      <p class="thanks__title">끝까지 읽어주셔서 감사합니다.</p>
+
+      <p class="thanks__message">
+        기본기를 다지며 꾸준히 성장하는 개발자로 사용자에게 더 나은 경험을 전달하고 싶습니다. <br />
+        배움을 멈추지 않고 좋은 서비스를 만드는 데 기여하는 개발자가 되겠습니다.
+      </p>
+
+      <ul class="contact__links">
+        <li class="contact__links-item">
+          <a href="https://github.com/seungjunn100" target="_blank">GitHub</a>
+        </li>
+        <li class="contact__links-item">
+          <a href="https://junn.dev/" target="_blank">Blog</a>
+        </li>
+        <li class="contact__links-item">
+          <button class="contact__email-button" type="button" data-email="seungjunn100@gmail.com">
+            Email
+          </button>
+        </li>
+      </ul>
+
+      <div class="toast" role="status" aria-live="polite">
+        <p>이메일이 복사되었습니다 !</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="copyright">© 2026 seungjunn100.github.io/portfolio</p>
+  </footer>
+</body>
+</html>
