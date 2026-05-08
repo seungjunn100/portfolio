@@ -351,7 +351,7 @@
     </section>
 
     <section id="projects" class="projects">
-      <h2 class="section-title">Projects</h2>
+      <h2 class="section-title section-title--wide">Projects</h2>
 
       <article class="projects__item">
         <div class="projects__image">
@@ -361,47 +361,40 @@
         <div class="projects__content">
           <h3 class="projects__title">junn.dev 개인 블로그</h3>
 
+          <p class="projects__description projects__description--muted">
+            개인 프로젝트 <span class="projects__description-bar">|</span> 기획, 설계, 구현, 배포
+          </p>
+
           <p class="projects__description">
             Markdown 기반으로 글을 작성하고, 빌드 시 이를 가공하여 화면에 렌더링하는 개인 기술 블로그입니다.
           </p>
 
           <p class="projects__description">
-            단순히 글을 작성하는 공간을 넘어서, GitHub 레포지토리를 콘텐츠 관리 시스템(CMS)처럼 활용하여 <br />
+            단순히 글을 작성하는 공간을 넘어서, GitHub 레포지토리를 콘텐츠 관리 시스템(CMS)처럼 활용하여 
             Markdown 파일을 중심으로 콘텐츠를 관리하고, 변경 이력을 Git으로 추적할 수 있도록 설계했습니다.
           </p>
+        </div>
 
-          <div class="projects__meta">
-            <div class="projects__meta-item">
-              <h4 class="projects__meta-title">유형</h4>
-              <p class="projects__meta-value">개인 프로젝트</p>
-            </div>
-            
-            <div class="projects__meta-item">
-              <h4 class="projects__meta-title">역할</h4>
-              <p class="projects__meta-value">기획, 설계, 구현, 배포</p>
-            </div>
+        <ul class="projects__link">
+          <li class="projects__link-item">
+            <a href="https://github.com/seungjunn100/junn.dev" target="_blank">GitHub</a>
+          </li>
+          <li class="projects__link-item">
+            <a href="https://junn.dev/" target="_blank">Deploy</a>
+          </li>
+        </ul>
 
-            <div class="projects__meta-item">
-              <h4 class="projects__meta-title">주요 기술</h4>
+        <div class="projects__section">
+          <h4 class="projects__section-title">주요 기술</h4>
 
-              <ul class="projects__stack">
-                <li class="projects__stack-item">React</li>
-                <li class="projects__stack-item">React Router</li>
-                <li class="projects__stack-item">React Markdown</li>
-                <li class="projects__stack-item">TypeScript</li>
-                <li class="projects__stack-item">Vite</li>
-                <li class="projects__stack-item">Vercel</li>
-              </ul>
-            </div>
-          </div>
-
-          <ul class="projects__link">
-            <li class="projects__link-item">
-              <a href="https://github.com/seungjunn100/junn.dev" target="_blank">GitHub</a>
-            </li>
-            <li class="projects__link-item">
-              <a href="https://junn.dev/" target="_blank">Deploy</a>
-            </li>
+          <ul class="projects__stack">
+            <li class="projects__stack-item">React</li>
+            <li class="projects__stack-item">React Router</li>
+            <li class="projects__stack-item">React Markdown</li>
+            <li class="projects__stack-item">TypeScript</li>
+            <li class="projects__stack-item">Vite</li>
+            <li class="projects__stack-item">Vercel</li>
+            <li class="projects__stack-item">CloudFlare</li>
           </ul>
         </div>
 
@@ -456,15 +449,15 @@
                 </div>
                 <div class="projects__trouble-row">
                   <dt>원인</dt>
-                  <dd>react-helmet-async는 React 렌더링 이후에 head를 수정하는 방식으로, 초기 HTML에는 메타데이터가 포함되지 않습니다. 개발자 도구는 JS 실행 이후 DOM을 보여주지만 Ctrl+U는 서버가 내려준 원본 HTML을 보여주기 때문에 차이가 발생했습니다.</dd>
+                  <dd>react-helmet-async는 React 렌더링 이후 head를 수정하는 방식으로, 서버가 내려주는 초기 HTML에는 메타데이터가 포함되지 않습니다.</dd>
                 </div>
                 <div class="projects__trouble-row">
                   <dt>해결</dt>
-                  <dd>클라이언트 방식을 제거하고, 프리렌더 단계에서 HTML 생성 시 메타데이터를 포함하도록 변경했습니다. metadata.ts에서 URL 기준으로 메타데이터를 생성하고, entry-server.tsx에서 head에 삽입하는 구조로 재설계했습니다.</dd>
+                  <dd>클라이언트 방식 대신 프리렌더 단계에서 메타데이터를 포함하도록 구조를 변경했습니다. URL 기준으로 메타데이터를 생성하고, head에 삽입하는 구조로 재설계했습니다.</dd>
                 </div>
                 <div class="projects__trouble-row">
                   <dt>결과</dt>
-                  <dd>초기 HTML에 메타데이터가 포함되어 SEO 및 SNS 공유 미리보기가 정상 동작하게 되었습니다. 클라이언트 라우팅 전환 시에도 title, description, OG 태그가 올바르게 갱신되도록 head 동기화 로직을 추가해 SPA 환경에서도 완전히 대응했습니다.</dd>
+                  <dd>초기 HTML에 메타데이터가 포함되어 SEO 및 SNS 미리보기가 정상 동작하고, SPA 환경에서도 head가 올바르게 갱신되도록 개선했습니다.</dd>
                 </div>
               </dl>
             </div>
@@ -499,50 +492,43 @@
         <div class="projects__image">
           <img src="./assets/images/projects-02.png" alt="영양제 구독 팀 프로젝트 메인 화면" />
         </div>
+
         <div class="projects__content">
           <h3 class="projects__title">영구 (영양제 구독)</h3>
+
+          <p class="projects__description projects__description--muted">
+            팀 프로젝트 (FE 4명) <span class="projects__description-bar">|</span> PL (Project Leader)
+          </p>
 
           <p class="projects__description">
             사용자의 컨디션 상태와 생활 습관을 분석하고 AI 분석을 통해 개인에게 필요한 맞춤형 영양제를 추천하는 서비스입니다.
           </p>
 
           <p class="projects__description">
-            PL로서 프로젝트 구조, 브랜치 전략, 코드 컨벤션을 정리하고 팀원들과 협업 기준을 맞췄으며, 기능 단위로 작업을 나눠 <br />
-            페이지 흐름에 맞게 역할을 분배하여 개발을 진행했습니다. 저는 로그인, 회원가입, 공통UI, 메인 페이지를 구현하였습니다.
+            PL로서 프로젝트 구조, 브랜치 전략, 코드 컨벤션을 정리하고 협업 기준을 맞췄으며, 기능 단위로 작업을 나눠 
+            페이지 흐름에 맞게 역할을 분배해 개발하였습니다. 저는 로그인, 회원가입, 공통 UI, 메인 페이지를 구현했습니다.
           </p>
+        </div>
 
-          <div class="projects__meta">
-            <div class="projects__meta-item">
-              <h4 class="projects__meta-title">유형</h4>
-              <p class="projects__meta-value">팀 프로젝트 (FE 4명)</p>
-            </div>
-            
-            <div class="projects__meta-item">
-              <h4 class="projects__meta-title">역할</h4>
-              <p class="projects__meta-value">PL (Project Leader)</p>
-            </div>
+        <ul class="projects__link">
+          <li class="projects__link-item">
+            <a href="https://github.com/FRONTENDBOOTCAMP-15th/final-05-YoungGoo" target="_blank">GitHub</a>
+          </li>
+          <li class="projects__link-item">
+            <a href="https://final-05-project.vercel.app/" target="_blank">Deploy</a>
+          </li>
+        </ul>
 
-            <div class="projects__meta-item">
-              <h4 class="projects__meta-title">주요 기술</h4>
+        <div class="projects__section">
+          <h4 class="projects__section-title">주요 기술</h4>
 
-              <ul class="projects__stack">
-                <li class="projects__stack-item">Next.js</li>
-                <li class="projects__stack-item">React</li>
-                <li class="projects__stack-item">TypeScript</li>
-                <li class="projects__stack-item">Zustand</li>
-                <li class="projects__stack-item">Tailwind CSS</li>
-                <li class="projects__stack-item">Vercel</li>
-              </ul>
-            </div>
-          </div>
-
-          <ul class="projects__link">
-            <li class="projects__link-item">
-              <a href="https://github.com/FRONTENDBOOTCAMP-15th/final-05-YoungGoo" target="_blank">GitHub</a>
-            </li>
-            <li class="projects__link-item">
-              <a href="https://final-05-project.vercel.app/" target="_blank">Deploy</a>
-            </li>
+          <ul class="projects__stack">
+            <li class="projects__stack-item">React</li>
+            <li class="projects__stack-item">Next.js</li>
+            <li class="projects__stack-item">TypeScript</li>
+            <li class="projects__stack-item">Zustand</li>
+            <li class="projects__stack-item">Tailwind CSS</li>
+            <li class="projects__stack-item">Vercel</li>
           </ul>
         </div>
 
@@ -644,7 +630,7 @@
             </div>
 
             <div class="projects__trouble-item">
-              <h5 class="projects__trouble-title">useSearchParams() 사용 시 Suspense Boundary 누락으로 인한 빌드 에러</h5>
+              <h5 class="projects__trouble-title">useSearchParams() 사용 시 Suspense Boundary 누락 빌드 에러</h5>
 
               <dl class="projects__trouble-detail">
                 <div class="projects__trouble-row">
@@ -680,6 +666,281 @@
               </dl>
             </div>
           </div>
+        </div>
+      </article>
+
+      <p class="projects__separated-description">
+        * 아래 영역은 퍼블리싱 프로젝트입니다. <br />
+        PC 시안만을 기반으로 다양한 디바이스에 대응할 수 있도록 반응형으로 구현한 작업물입니다.
+      </p>
+      
+      <article class="projects__item projects__item--publishing">
+        <div class="projects__image">
+          <img src="./assets/images/work-10.png" alt="신도테크 메인 화면" />
+        </div>
+        
+        <div class="projects__content">
+          <h3 class="projects__title">
+            신도테크 <span class="projects__title-meta">퍼블리싱 100%</span>
+          </h3>
+
+          <p class="projects__description">
+            방수 &middot; 코팅 솔루션 전문 기업의 제품 및 시공 사례 중심 웹사이트입니다.
+          </p>
+
+          <ul class="projects__description-list">
+            <li class="projects__description-list-item">제품 &middot; 프로젝트 중심의 기업형 레이아웃 퍼블리싱</li>
+            <li class="projects__description-list-item">Slick, Swiper를 활용해 다양한 슬라이드 구성</li>
+          </ul>
+
+          <ul class="projects__link">
+            <li class="projects__link-item projects__link-item--wide">
+              <a href="https://sindotech.com/" target="_blank">Live</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="projects__item projects__item--publishing">
+        <div class="projects__image">
+          <img src="./assets/images/work-09.png" alt="환경재단 투어스 메인 화면" />
+        </div>
+        
+        <div class="projects__content">
+          <h3 class="projects__title">
+            환경재단 투어스 <span class="projects__title-meta">퍼블리싱 100%</span>
+          </h3>
+
+          <p class="projects__description">
+            지역 경제 활성화와 친환경 여행을 주제로 한 캠페인 웹사이트입니다.
+          </p>
+
+          <ul class="projects__description-list">
+            <li class="projects__description-list-item">이벤트 콘텐츠 중심 랜딩 페이지 퍼블리싱</li>
+            <li class="projects__description-list-item">GSAP &middot; ScrollTrigger 기반 스크롤 인터랙션 구현</li>
+          </ul>
+
+          <ul class="projects__link">
+            <li class="projects__link-item projects__link-item--wide">
+              <a href="./works/work-09/html/index.html" target="_blank">Live</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="projects__item projects__item--publishing">
+        <div class="projects__image">
+          <img src="./assets/images/work-08.png" alt="휴온스랩 메인 화면" />
+        </div>
+        
+        <div class="projects__content">
+          <h3 class="projects__title">
+            휴온스랩 <span class="projects__title-meta">퍼블리싱 100%</span>
+          </h3>
+
+          <p class="projects__description">
+            글로벌 바이오 기업의 브랜드 &middot; 연구 정보를 제공하는 기업 웹사이트입니다.
+          </p>
+
+          <ul class="projects__description-list">
+            <li class="projects__description-list-item">영문 사이트 기준의 메인 및 서브 페이지 퍼블리싱</li>
+            <li class="projects__description-list-item">연구 &middot; 제품 정보 전달에 적합한 콘텐츠 레이아웃과 Swiper 구현</li>
+          </ul>
+
+          <ul class="projects__link">
+            <li class="projects__link-item projects__link-item--wide">
+              <a href="https://huonslab.com/" target="_blank">Live</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="projects__item projects__item--publishing">
+        <div class="projects__image">
+          <img src="./assets/images/work-07.png" alt="중소상공인희망재단 메인 화면" />
+        </div>
+        
+        <div class="projects__content">
+          <h3 class="projects__title">
+            중소상공인희망재단 <span class="projects__title-meta">퍼블리싱 100%</span>
+          </h3>
+
+          <p class="projects__description">
+            소상공인 지원 사업 및 재단 소식을 제공하는 정보형 웹사이트입니다.
+          </p>
+
+          <ul class="projects__description-list">
+            <li class="projects__description-list-item">게시판 및 사업 안내 중심 화면 퍼블리싱</li>
+            <li class="projects__description-list-item">정보 탐색 중심 내비게이션 구조 구현</li>
+          </ul>
+
+          <ul class="projects__link">
+            <li class="projects__link-item projects__link-item--wide">
+              <a href="https://www.heemangfdn.or.kr/" target="_blank">Live</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="projects__item projects__item--publishing">
+        <div class="projects__image">
+          <img src="./assets/images/work-06.png" alt="페이브 커피 메인 화면" />
+        </div>
+        
+        <div class="projects__content">
+          <h3 class="projects__title">
+            페이브 커피 <span class="projects__title-meta">퍼블리싱 100%</span>
+          </h3>
+
+          <p class="projects__description">
+            브랜드 아이덴티티를 강조한 카페 브랜드 웹사이트입니다.
+          </p>
+
+          <ul class="projects__description-list">
+            <li class="projects__description-list-item">가맹 안내 중심의 랜딩 페이지 퍼블리싱</li>
+            <li class="projects__description-list-item">브랜드 분위기에 맞는 메인 UI 및 비주얼 요소 구현</li>
+          </ul>
+
+          <ul class="projects__link">
+            <li class="projects__link-item projects__link-item--wide">
+              <a href="https://favecoffee.co.kr/" target="_blank">Live</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="projects__item projects__item--publishing">
+        <div class="projects__image">
+          <img src="./assets/images/work-05.png" alt="한국IT서비스산업협회 메인 화면" />
+        </div>
+        
+        <div class="projects__content">
+          <h3 class="projects__title">
+            한국IT서비스산업협회 <span class="projects__title-meta">퍼블리싱 100%</span>
+          </h3>
+
+          <p class="projects__description">
+            협회 소식과 자료, 행사 정보를 제공하는 협회 공식 웹사이트입니다.
+          </p>
+
+          <ul class="projects__description-list">
+            <li class="projects__description-list-item">공지 &middot; 자료 &middot; 행사 등 게시판 중심의 정보 구조 퍼블리싱</li>
+            <li class="projects__description-list-item">fullPage.js 기반 섹션 단위 스크롤 구조 및 메인 페이지 구현</li>
+          </ul>
+
+          <ul class="projects__link">
+            <li class="projects__link-item projects__link-item--wide">
+              <a href="https://www.itsa.or.kr/" target="_blank">Live</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="projects__item projects__item--publishing">
+        <div class="projects__image">
+          <img src="./assets/images/work-04.png" alt="케이돔 메인 화면" />
+        </div>
+        
+        <div class="projects__content">
+          <h3 class="projects__title">
+            케이돔 <span class="projects__title-meta">퍼블리싱 100%</span>
+          </h3>
+
+          <p class="projects__description">
+            에어돔 전문 기업의 제품 및 시공 사례 중심 웹사이트입니다.
+          </p>
+
+          <ul class="projects__description-list">
+            <li class="projects__description-list-item">브랜드 &middot; 제품 &middot; 시공 사례 중심 기업형 UI 퍼블리싱</li>
+            <li class="projects__description-list-item">GSAP &middot; ScrollTrigger 기반 스크롤 인터랙션 구현</li>
+          </ul>
+
+          <ul class="projects__link">
+            <li class="projects__link-item projects__link-item--wide">
+              <a href="https://kairdome.co.kr/" target="_blank">Live</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="projects__item projects__item--publishing">
+        <div class="projects__image">
+          <img src="./assets/images/work-03.png" alt="비트포비아 던전 메인 화면" />
+        </div>
+        
+        <div class="projects__content">
+          <h3 class="projects__title">
+            비트포비아 던전 <span class="projects__title-meta">퍼블리싱 100%</span>
+          </h3>
+
+          <p class="projects__description">
+            방탈출 테마를 기반으로 한 예약 서비스 웹사이트입니다.
+          </p>
+
+          <ul class="projects__description-list">
+            <li class="projects__description-list-item">테마 분위기를 반영한 인터랙션 및 애니메이션 퍼블리싱</li>
+            <li class="projects__description-list-item">Swiper 기반 슬라이드 구성 및 예약 흐름 UI 구현</li>
+          </ul>
+
+          <ul class="projects__link">
+            <li class="projects__link-item projects__link-item--wide">
+              <a href="https://xdungeon.net" target="_blank">Live</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="projects__item projects__item--publishing">
+        <div class="projects__image">
+          <img src="./assets/images/work-02.png" alt="성동구정신건강복지센터 메인 화면" />
+        </div>
+        
+        <div class="projects__content">
+          <h3 class="projects__title">
+            성동구정신건강복지센터 <span class="projects__title-meta">퍼블리싱 80%</span>
+          </h3>
+
+          <p class="projects__description">
+            정신건강 정보와 상담 서비스를 제공하는 공공기관 웹사이트입니다.
+          </p>
+
+          <ul class="projects__description-list">
+            <li class="projects__description-list-item">정보 전달 중심의 공공기관 UI 퍼블리싱</li>
+            <li class="projects__description-list-item">다양한 정보 페이지를 일관된 구조로 통일성 있는 레이아웃 구현</li>
+          </ul>
+
+          <ul class="projects__link">
+            <li class="projects__link-item projects__link-item--wide">
+              <a href="https://www.mindcare.or.kr" target="_blank">Live</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+      
+      <article class="projects__item projects__item--publishing">
+        <div class="projects__image">
+          <img src="./assets/images/work-01.png" alt="맛닭꼬(프렌차이즈) 메인 화면" />
+        </div>
+        
+        <div class="projects__content">
+          <h3 class="projects__title">
+            맛닭꼬(프렌차이즈) <span class="projects__title-meta">퍼블리싱 100%</span>
+          </h3>
+
+          <p class="projects__description">
+            프랜차이즈 브랜드 소개와 가맹 정보를 제공하는 브랜드 웹사이트입니다.
+          </p>
+
+          <ul class="projects__description-list">
+            <li class="projects__description-list-item">가맹 전환을 고려한 랜딩 페이지 퍼블리싱</li>
+            <li class="projects__description-list-item">브랜드 메시지 전달을 위한 AOS 기반 스크롤 인터랙션 구현</li>
+          </ul>
+
+          <ul class="projects__link">
+            <li class="projects__link-item projects__link-item--wide">
+              <a href="https://mdcco.co.kr" target="_blank">Live</a>
+            </li>
+          </ul>
         </div>
       </article>
     </section>
